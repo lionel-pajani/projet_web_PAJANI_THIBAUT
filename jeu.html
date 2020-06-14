@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>L'ecologoie & nous</title>
+	<link href="style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body id="corps" onload="start()">
+	<div id="title">
+		<img src="world.png">
+        <h1>L'écologie & nous</h1>
+
+    </div>
+    <header>
+		<div class="menu">
+          <a href="accueil.html">Accueil</a>
+          <a href="Qui-sommes-nous.html">Qui sommes-nous</a>
+          <div class="dropdown">
+            <button class="dropbtn">L'écologie en 2020</button>
+            <div class="liste">
+              <a href="energies-vertes.html">Les énergies vertes</a>
+              <a href="recyclage.html">Le recyclage</a>
+              <a href="pollution.html">La pollution</a>
+              <a href="rechauffement-climat.html">Le réchauffement climatique</a>
+            </div>
+          </div> 
+          <a href="jeu.html">Jeu interactif</a>
+        </div>
+    </header>
+    <section id="jeu-intro">
+    	<div class="enonce">
+    		<h1>Jeu interactif</h1>
+    		<div id="start">
+    			<p>Voici un jeu interactif qui va vous apporter et/ou tester vos connaissances sur l'environnement d'un point de vue générale !</p>
+    			<p>Vous êtes prêt ? C'est parti !</p>
+    			<button class="boutton2" type="button" onclick="showForm1()">Thème : Le recyclage</button>
+    			<button class="boutton2" type="button" onclick="showQ2form1()">Thèmes : Le réchauffement climatique | pollution | énergies vertes</button>
+    		</div>
+    		
+    		<form id="etape1.0">
+	    		<p>Voulez-vous être une bouteille en :</p>
+	    		<div>
+	    			<input type="radio" id="choice1" name="choice" value="recyclee">
+	    			<label for="recyclee">Recyclée</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice2" name="choice" value="plastique">
+	    			<label for="plastique">Plastique</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice3" name="choice" value="verre">
+	    			<label for="verre">Verre</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="step1()">Passer à l'étape suivante</button>
+	    		</div>
+    		</form>
+    		<form id="etape2.0">
+	    		<p>Une fois cette bouteille recyclée choisie, une fois utilisée où souhaitez-vous la jeter ?</p>
+	    		<div>
+	    			<input type="radio" id="choice4" name="choice" value="poubelle">
+	    			<label for="recyclee">À la poubelle</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice5" name="choice" value="nature">
+	    			<label for="plastique">Dans la nature/Sur la voie publique</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="step2()">Passer à l'étape suivante</button>
+	    		</div>
+    		</form>
+    		<form id="etape3.0">
+	    		<p>Dans quelle type de poubelle allez-vous jeter cette bouteille ?</p>
+	    		<div>
+	    			<input type="radio" id="choice6" name="choice" value="tri">
+	    			<label for="recyclee">Poubelle tri séléctif</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice7" name="choice" value="classique">
+	    			<label for="plastique">Poubelle classique</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="step3()">Terminer</button>
+	    		</div>
+    		</form>
+    		<form id="etape3.1"> <!--BOUTEILLE PLASTIQUE-->
+	    		<p>En combien de temps pensez-vous que votre bouteille en plastique se décomposera ?</p>
+	    		<div>
+	    			<input type="radio" id="choice8" name="choice" value="time1">
+	    			<label for="recyclee">De 20 à 50 ans</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice9" name="choice" value="time2">
+	    			<label for="plastique">De 10 000 à 50 000 ans</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice10" name="choice" value="time3">
+	    			<label for="plastique">De 100 à 1000 ans</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="step3_1()">Terminer</button>
+	    		</div>
+    		</form>
+    		<form id="etape3.2"> <!--BOUTEILLE VERRE-->
+	    		<p>En combien de temps pensez-vous que votre bouteille en verre se décomposera ?</p>
+	    		<div>
+	    			<input type="radio" id="choice11" name="choice" value="time1">
+	    			<label for="recyclee">8000 ans</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice12" name="choice" value="time2">
+	    			<label for="plastique">4000 ans</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice13" name="choice" value="time3">
+	    			<label for="plastique">100 ans</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="step3_2()">Terminer</button>
+	    		</div>
+    		</form>
+    		<form id="etape3.3"> <!--BOUTEILLE recyclée-->
+	    		<p>En combien de temps pensez-vous que votre bouteille recyclée se décomposera ?</p>
+	    		<div>
+	    			<input type="radio" id="choice14" name="choice" value="time1">
+	    			<label for="recyclee">De 10 à 500 ans</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice15" name="choice" value="time2">
+	    			<label for="plastique">2000 ans</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="choice16" name="choice" value="time3">
+	    			<label for="plastique">De 100 à 1000 ans</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="step3_3()">Terminer</button>
+	    		</div>
+    		</form>
+    		<div id="answer1">
+    			<div class="goback">
+	    			<a href="jeu.html">Recommencer</a>
+	    			<a href="Qui-sommes-nous.html">Nous contacter</a>
+    			</div>
+    			<div class="pts">
+    				<p id="demo1"></p>
+    			</div>
+    			<div class="block2">
+    				<p>Réponses :<br><br>Une bouteille en plastique met entre <b>10 000 et 50 000 ans</b> à se décomposer.</p>
+	    			<p>Une bouteille en verre met <b>4000 ans</b> à se décomposer.</p>
+	    			<p>Une bouteille recyclée met entre <b>100 et 1000 ans</b> à se décomposer.</p>
+    			</div>
+    		</div>
+    		<form id="q2-etape1"> <!-- QUIZZ 2-->
+    			<p>Pour commencer, veuillez choisir la voiture de votre choix :</p>
+	    		<div>
+	    			<input type="radio" id="q2-choice1" name="choice" value="thermique">
+	    			<label for="recyclee">Voiture thermique</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice2" name="choice" value="hybride">
+	    			<label for="plastique">Voiture hybride</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice3" name="choice" value="elec">
+	    			<label for="plastique">Voiture éléctrique</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="q2step1()">Suivant</button>
+	    		</div>
+    		</form>
+    	</div>
+    	<form id="q2-etape2.1"> <!-- THERMIQUE-->
+    			<p>Selon vous, combien en moyenne votre voiture thermique rejette-elle de CO2 ?(fabrication et utilisation)</p>
+	    		<div>
+	    			<input type="radio" id="q2-choice4" name="choice" value="thermique1">
+	    			<label for="recyclee">5 tonnes</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice5" name="choice" value="thermique2">
+	    			<label for="plastique">48 tonnes</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice6" name="choice" value="thermique3">
+	    			<label for="plastique">22 tonnes</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="q2step2_1()">Suivant</button>
+	    		</div>
+    		</form>
+    		<form id="q2-etape2.2"> <!-- hybride-->
+    			<p>Selon vous, combien en moyenne votre voiture hybride rejette-elle de CO2 ?(fabrication et utilisation)</p>
+	    		<div>
+	    			<input type="radio" id="q2-choice7" name="choice" value="hybride1">
+	    			<label for="recyclee">6.5 tonnes</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice8" name="choice" value="hybride2">
+	    			<label for="plastique">15 tonnes</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice9" name="choice" value="hybride3">
+	    			<label for="plastique">2 tonnes</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="q2step2_2()">Suivant</button>
+	    		</div>
+    		</form>
+    		<form id="q2-etape2.3"> <!-- electrique-->
+    			<p>Selon vous, combien en moyenne votre voiture éléctrique rejette-elle de CO2 lors de son utilisation ?</p>
+	    		<div>
+	    			<input type="radio" id="q2-choice10" name="choice" value="elec1">
+	    			<label for="recyclee">10 tonnes</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice11" name="choice" value="elec2">
+	    			<label for="plastique">2 tonnes</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice12" name="choice" value="elec3">
+	    			<label for="plastique">0</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="q2step2_3()">Suivant</button>
+	    		</div>
+    		</form>
+    		<form id="q2-etape3.1"> <!-- thermique/hybride-->
+    			<p>A votre avis, à combien s'élève le taux de CO2 dans l'air ?</p>
+	    		<div>
+	    			<input type="radio" id="q2-choice13" name="choice" value="env1">
+	    			<label for="recyclee">200 parties par million</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice14" name="choice" value="env2">
+	    			<label for="plastique">400 parties par million</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice15" name="choice" value="env3">
+	    			<label for="plastique">800 parties par million</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="q2step3_1()">Terminer</button>
+	    		</div>
+    		</form>
+    		<form id="q2-etape3.2"> <!--electrique-->
+    			<p>A votre avis, une voiture éléctrique est elle à 100% non polluante ?</p>
+	    		<div>
+	    			<input type="radio" id="q2-choice16" name="choice" value="env1">
+	    			<label for="recyclee">Oui, à 100%</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice17" name="choice" value="env2">
+	    			<label for="plastique">Non, sa fabrication émet 15 à 70% de CO2 que la fabrication d'une voiture thermique</label>
+	    		</div>
+	    		<div>
+	    			<input type="radio" id="q2-choice18" name="choice" value="env3">
+	    			<label for="plastique">Non, sa fabrication et sa destruction ont émettent plus de CO2 qu'une voiture thermique</label>
+	    		</div>
+	    		<div class="boutton">
+	    			<button class="boutton1" type="button" onclick="q2step3_2()">Terminer</button>
+	    		</div>
+    		</form>
+    		<div id="answer2">
+    			<div class="goback">
+	    			<a href="jeu.html">Recommencer</a>
+	    			<a href="Qui-sommes-nous.html">Nous contacter</a>
+    			</div>
+    			<div class="pts">
+    				<p id="demo2"></p>
+    			</div>
+    			<div class="block2">
+    				<p>Réponses :<br><br>Un véhicule thermique émet<b> 22 tonnes de CO2</b></p>
+    				<p>Un véhicule hybride émet<b> 6.5 tonnes de CO2</b>.</p>
+    				<p>Un véhicule éléctrique émet<b> aucun gramme de CO2</b> lors de son utilisation.</b></p>
+    				<p>Depuis le XIXe siècle le taux en CO² dans l'air est passé de 270 parties par million à <b>400 parties par million</b>.</p>
+    				<p>La fabrication d'une voiture électrique émet <b>15 à 70% de CO2 que la fabrication d'une voiture thermique</b>.</p>
+    			</div>
+    		</div>
+	</section>
+    <footer>
+        <a href="accueil.html">L'écologie & Nous</a>
+        <p>Projet Programmation Web</p>
+        <a href="Qui-sommes-nous.html">Qui sommes-nous ?</a>
+        <div>
+            <a href="https://www.instagram.com/?hl=fr"><img src="instagram.png"></a>
+            <a href="https://facebook.com"><img src="facebook.png"></a>
+            <a href="https://snapchat.com"><img src="snap.png"></a>
+        </div>
+    </footer>  
+
+	<script src="script.js"></script> <!-- Nous le mettons a la fin afin d'executer les scripts quand le DOM est pret-->
+</body>
+</html>

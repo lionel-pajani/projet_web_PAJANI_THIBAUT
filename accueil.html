@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>L'ecologoie & nous</title>
+	<link href="style.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
+    
+</head>
+<body>
+
+	<div id="title">
+		<img src="world.png">
+        <h1>L'écologie & nous</h1>
+
+    </div>
+	<header>
+        <div class="menu">
+          <a href="accueil.html">Accueil</a>
+          <a href="Qui-sommes-nous.html">Qui sommes-nous</a>
+          <div class="dropdown">
+            <button class="dropbtn">L'écologie en 2020</button>
+            <div class="liste">
+              <a href="energies-vertes.html">Les énergies vertes</a>
+              <a href="recyclage.html">Le recyclage</a>
+              <a href="pollution.html">La pollution</a>
+              <a href="rechauffement-climat.html">Le réchauffement climatique</a>
+            </div>
+          </div> 
+          <a href="jeu.html">Jeu interactif</a>
+        </div>
+    </header>
+    <section id="image">
+        <div class="caroussel">
+            
+            <div class="slide">
+                <img src="ecolo3.jpg">
+            </div>
+            <div class="slide">
+                <img src="recyclage-carouss.jpg">
+            </div>
+            <div class="slide">
+                <img src="pollution1.jpg">
+            </div>
+            <button class="precedent" onclick="nextslide(-1)">&#129136;</button>
+            <button class="suivant" onclick="nextslide(1)">&#129138;</button>
+            
+            <!--<img src="ecolo3.jpg">-->
+        </div>
+    </section>
+    <section class="nowadays">
+            <div class="white-divider"></div>
+            <h2>L'écologie en 2020</h2>
+            <div class="block">
+                <h4> De nos jours, l'écologie va de plus en plus mal et les réponses apportées sont insuffisantes. Par manque de réglementations ou d'informations des particuliers profitent de ces failles pour continuer leurs activités ou la population garde des mauvaises habitudes. C'est dans ce but que nous avons décidé d'apporter des informations pour sensibiliser le plus grand monde. En très peu de temps on a observé une hausse de chiffres alarmant durant ces dernières années comme le témoigne les chiffres suivants.</h4>
+            </div>
+        </div>      
+    </section>
+    <section class="chiffres">
+        <div class="green-divider"></div>
+        <div class="actuelchiffre">
+             <h2>Des chiffres alarmants</h2>
+            <button class="chiffre1"><b>1 espèce sur 8 </b> animale ou végétale est menacée d'extinction imminente.</button>
+            <button class="chiffre1"><b>22 millions </b> de personnes déplacées en raison du clumat en 2013.</button>
+            <button class="chiffre1"><b>8,3 milliards</b> de tonnes de plastiques ont été produites entre 1950 et 2015</button>
+            <button class="chiffre1"><b>92%</b> de la population mondiale respire un air ambiant trop pollué.</button>
+        </div>
+        <p>Source : Agences spécialisées</p>
+    </section>
+    <section class="nowadays">
+        <div class="white-divider"></div>
+        <h2>Des thèmes importants</h2>
+        <div class="block">
+            <h4> Nous avons décidé de nous focaliser sur 4 thèmes principaux qui pourront informer le plus grand nombre sur des habitudes faciles et utiles à adopter pour améliorer la situation actuelle. Nous vous proposons ainsi d'en découvrir davantage sur <a href="pollution.html">la pollution</a>, <a href="energies-vertes.html">les énergies vertes</a>, <a href="rechauffement-climat.html">le réchauffement climatique</a> et sur <a href="recyclage.html">le recyclage</a>. Une fois la main mise sur ces différentes notions nous vous proposons un petit jeu sur forme d'un quizz qui vous fera comprendre l'impact de vos choix dans certaines situations liées à ces thématiques.</h4>
+        </div>    
+    </section>
+    <footer>
+        <div>
+            <a href="#title">Accueil</a>
+        </div>
+        <div>
+            <a href="Qui-sommes-nous.html">Qui sommes-nous ?</a>
+        </div>
+        
+        <div>
+            <a href="https://www.instagram.com/?hl=fr"><img src="instagram.png"></a>
+            <a href="https://facebook.com"><img src="facebook.png"></a>
+            <a href="https://snapchat.com"><img src="snap.png"></a>
+        </div>
+    </footer>    
+    </body>
+    <script src="script.js"></script><!-- Nous le mettons a la fin afin d'executer les scripts quand le DOM est pret-->
+</body>
+</html>

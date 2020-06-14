@@ -1,0 +1,706 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+
+	font-family: 'Crete Round', sans-serif;
+	overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font-weight:bold;
+}
+
+
+section .heading
+{
+	text-align: center;
+	
+}
+
+
+header
+{
+	position:sticky;
+	top:0;
+	z-index: 1;
+}
+
+@media screen and (min-width: 900px)
+{
+	.menu
+	{
+	  overflow: hidden;
+	  background-color: #61DA6D;
+	  text-transform: uppercase;
+	}
+
+	.menu a
+	{
+	  float: left;
+	  font-size: 18px;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+
+	.dropdown
+	{
+	  float: left;
+	  overflow: hidden;
+	}
+
+	.dropdown .dropbtn
+	{
+		text-transform: uppercase;
+		font-size: 18px;  
+		border: none;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: inherit;
+	}
+	.dropdown a
+	{
+		text-transform: none;
+	}
+
+	.menu a:hover, .dropdown:hover .dropbtn
+	{
+	  background-color: #53B15C;
+	}
+
+	.liste
+	{
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 8px 8px 20px black;
+	}
+
+	.dropdown:hover .liste
+	{
+	  display: block;
+	}
+
+	.liste a
+	{
+	  float: none;
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.liste a:hover
+	{
+	  background-color: #ddd;
+	}
+}
+
+@media screen and (max-width: 900px)
+{
+	.menu
+	{
+	  overflow: hidden;
+	  background-color: #61DA6D;
+	  text-transform: uppercase;
+
+	}
+
+	.menu a
+	{
+	  float: left;
+	  font-size: 18px;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  border-bottom: 1px solid #ddd;
+	}
+	.menu a, .liste
+	{
+		width: 100%;
+	}
+
+	.dropdown .dropbtn
+	{
+		text-transform: uppercase;
+		font-size: 18px;
+		border: none;  
+		border-bottom: 1px solid #ddd;
+		outline: none;
+		color: white;
+		padding: 14px 16px;
+		background-color: inherit;
+		text-align: center;
+		width: 100%;
+
+
+	}
+	.dropdown a
+	{
+		text-transform: none;
+	}
+
+	.menu a:hover, .dropdown:hover .dropbtn
+	{
+	  background-color: #53B15C;
+	}
+
+	.liste
+	{
+		text-align: center;
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 8px 8px 20px black;
+	}
+
+	.dropdown:hover .liste
+	{
+	  display: block;
+	}
+
+	.liste a
+	{
+	  float: none;
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: center;
+	}
+
+	.liste a:hover
+	{
+	  background-color: #ddd;
+	}
+}
+/*----------------------------QUI SOMMES NOUS---------*/
+#image h2
+{
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.block2{
+	margin-left:60%;
+	width:20%;
+	margin-top:20px;
+	background-color: #DFFFCE;
+	border: 2px solid white;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border-style: dashed; 
+}
+.block2 p
+{
+	margin-top: 10px;
+}
+/*----------------------CAROUSSEL------------------------*/
+.slide img
+{
+	width: 70%;
+	height: 70%;
+	transition: all 0.5s ease-out;
+}
+
+.slide img:hover
+{
+	box-shadow: 0px 10px 19px #337E2F;
+}
+
+.slide
+{
+	display: none;
+}
+.caroussel
+{
+	max-width: 1000px;
+	margin: auto;
+	text-align: center;
+	position: relative;
+
+}
+
+.suivant
+{
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.suivant, .precedent
+{
+	cursor: pointer;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	font-weight: bold;
+	font-size: 25px;
+	color: #61DA6D;
+	border-color: #0B9310;
+	background: white;
+	transition: all 0.5s ease-out;
+
+}
+
+
+.suivant:hover, .precedent:hover
+{
+	
+	background: #ddd;
+}
+
+
+/*----------------Ecologie-----------*/
+#title
+{
+	width: 100%;
+    margin: 0 auto;
+    padding: 5px 0px 0px;
+}
+#title h1
+{
+	color: #7EBB84;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 45px;
+
+}
+
+#title img
+{
+	width: 80px;
+	display: block;
+	border-radius: 50%;
+	margin-left: auto;
+    margin-right: auto;
+  	height: auto;
+  	margin-bottom: 20px;
+  	transition: all 0.3s ease-out; /* permet d'avoir une transition de 0.3s qd on place la souris sur le bouton*/ 
+}
+#title img:hover
+{
+	
+	box-shadow: 0px 2px 13px #337E2F;
+}
+
+#image
+{
+	padding: 50px;
+	background: #DFFFCE;
+}
+
+.wrapper
+{
+	width: 100%;
+    margin: 0 auto;
+    padding: 15px 0px 15px;
+}
+
+
+.green-divider
+{
+	width: 200px;
+	height: 2px;
+	background:  #136753;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+
+
+.white-divider
+{
+	width: 100px;
+	height: 2px;
+	background:  white;
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+
+#intro h2
+{
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+#intro
+{
+	padding: 50px;
+	background: #61DA6D;
+}
+	
+
+.part1 img
+{
+	border-radius: 30px;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	width: 50%;
+  	height: auto;
+  	padding-bottom: 20px;
+}
+
+
+.block
+{
+	width: 50%;
+	margin: 20px auto;
+	text-align: center;
+	padding: 40px;
+	background-color: #ddd;
+	border-radius: 10px;
+	border: 2px solid #646464;
+	margin-bottom: 20px;
+}
+.block a
+{
+	text-decoration: none;
+	color: #56C261;
+}
+
+.chiffres
+{
+	padding: 50px;
+	background: #DFFFCE;
+
+	
+}
+
+.actuelchiffre h2
+{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-top: 20px;
+	color: #7EBB84;
+}
+
+.chiffre1
+{
+
+	border: 2px solid black;
+	width: 250px;
+	height: 250px;
+	box-shadow: 8px 8px 20px grey;
+	background: #ADE78E;
+	border-radius:50%;
+	margin-top: 20px;
+	margin-left: 280px;
+	font-size: 20px;
+	transition: all 0.5s ease-out;/* permet d'avoir une transition de 0.3s qd on place la souris sur le bouton*/ 
+}
+
+
+.chiffre1:hover
+{
+	background: #D84201;
+}
+
+.chiffres p
+{
+	padding-top: 70px;
+	text-align: center;
+	font-size: 15px;
+	font-style: italic;
+}
+
+
+
+
+/*-------------------------PAGE JEU INTERACTIF--------------------*/
+
+#jeu-intro
+{
+ padding-top : 50px;
+ padding-bottom : 150px;
+ background: #DFFFCE;
+}
+
+.enonce h1
+{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+input
+{
+	margin: 10px;
+}
+form
+{
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 350px;
+    padding: 20px;
+    border: 2px solid #7EBB84;
+	border-radius: 20px;
+	background: white;
+	
+}
+form p, p
+{
+	text-align: center;
+}
+
+#start, .pts
+{
+	padding: 20px;
+}
+.boutton
+{
+	text-align: center;
+}
+.boutton1
+{
+	margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    border: 0.8px solid black;
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #61DA6D;
+    transition: all 0.3s ease-out;
+}
+.boutton2
+{
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	font-size: 15px;
+	border: 0.8px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #61DA6D;
+    transition: all 0.3s ease-out;
+}
+
+{
+	box-shadow: 0px 2px 15px #337E2F;
+	border: 1.1px solid black;
+}
+
+
+
+#answer p b
+{
+	color: #61DA6D;
+}
+.block2
+{
+	width: 50%;
+	margin: 20px auto;
+	text-align: center;
+	padding: 40px;
+	background-color: white;;
+	border-radius: 10px;
+	border: 2px solid #61DA6D;
+	margin-bottom: 20px;
+}
+.goback
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.goback a
+{
+
+	border: 0.8px solid black;
+	color: black;
+	background: #61DA6D;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 15px;
+	transition: all 0.3s ease-out;
+}
+
+.boutton1:hover, .boutton2:hover, .goback a:hover
+{
+	
+	box-shadow: 0px 2px 12px #337E2F;
+	border: 1.1px solid black;
+}
+
+/*-------------------------------------LA POLLUTION------------------------------*/
+.introduction
+{
+	padding: 50px;
+	background: #DFFFCE;
+}
+.introduction h1
+{
+	color: #7EBB84;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 45px;
+	padding: 10px;
+}
+
+
+.image-intro
+ {
+ 	border-radius: 30px;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	width: 500px;
+  	height: auto;
+  	margin-bottom: 20px;
+  	transition: all 0.3s ease-out;
+  	
+ }
+
+.image-intro:hover
+ {
+ 	box-shadow: 0px 2px 15px #337E2F;
+ }
+
+ .nowadays
+ {
+ 	padding: 50px;
+	background: #61DA6D;
+ }
+ .nowadays h2
+ {
+ 	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-top: 20px;
+ }
+  @media screen and (max-width: 1200px)
+ {
+ 	.actuelchiffre button
+ 	{
+ 		
+ 		width: 150px;
+		height: 150px;
+		font-size: 12px;
+		margin-left: auto;
+		margin-right: auto;
+ 	}
+ 	.actuelchiffre
+ 	{
+ 		text-align: center;
+ 	}
+ }
+
+ @media screen and (max-width: 800px)
+ {
+ 	.actuelchiffre button
+ 	{
+ 		
+ 		width: 150px;
+		height: 150px;
+		font-size: 12px;
+		margin-left: auto;
+		margin-right: auto;
+ 	}
+ }
+
+/*----------------------------RECYCLAGE---------------*/
+
+.recyclage2
+{
+	padding: 50px;
+	background: #DFFFCE;
+}
+.recyclage1
+{
+	padding: 50px;
+	background: #61DA6D;
+}
+.recyclage1 h2
+{
+	color: white;
+}
+.recyclage2 h2
+{
+	color: #7EBB84;
+}
+.recyclage1 h2, .recyclage2 h2
+{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin-top: 20px;
+	
+}
+.blockimg img
+{
+	width: 35%;
+	height: auto;
+	display: block;
+	box-shadow: 0px 2px 13px #337E2F;
+	margin-left: auto;
+    margin-right: auto;
+  	margin-top: 20px;
+}
+
+ /*---------------------------FOOTER------------------*/
+
+ footer
+{
+	text-align: center;
+	padding: 10px;
+}
+footer a
+{
+	padding-top: 20px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #7EBB84;
+	text-transform: uppercase;
+	padding-left: 20px;
+	transition: all 0.2blocks ease-out;
+}
+footer a:hover
+{
+	font-size: 21px;
+}
+
+footer p
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+footer div
+{
+	margin-top: 10px;
+}
+
+footer img
+{
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+	margin-left: 22px;
+	transition: all 0.3s ease-out;
+}
+
+footer img:hover
+{
+	box-shadow: 0px 0px 18px black;
+}
